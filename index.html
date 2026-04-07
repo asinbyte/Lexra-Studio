@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexra Studio — Premium Web Design & Development</title>
+    <meta name="description" content="Lexra Studio crafts stunning, high-performance websites for modern businesses. Web design, development, hosting & management.">
+    <meta name="keywords" content="web design, website development, hosting, web management, Lexra Studio">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-logo">
+            <svg viewBox="0 0 280 80" class="logo-svg loader-logo-svg">
+                <defs>
+                    <linearGradient id="loaderSilver" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ffffff"/>
+                        <stop offset="50%" style="stop-color:#c0c0c0"/>
+                        <stop offset="100%" style="stop-color:#808080"/>
+                    </linearGradient>
+                </defs>
+                <text x="140" y="45" text-anchor="middle" fill="url(#loaderSilver)" font-family="'Outfit', sans-serif" font-weight="700" font-size="52" letter-spacing="3">LE</text>
+                <text x="175" y="45" text-anchor="middle" fill="#e63946" font-family="'Outfit', sans-serif" font-weight="700" font-size="52" letter-spacing="3">X</text>
+                <text x="225" y="45" text-anchor="middle" fill="url(#loaderSilver)" font-family="'Outfit', sans-serif" font-weight="700" font-size="52" letter-spacing="3">RA</text>
+                <text x="140" y="72" text-anchor="middle" fill="#888" font-family="'Outfit', sans-serif" font-weight="300" font-size="16" letter-spacing="12">STUDIO</text>
+            </svg>
+        </div>
+        <div class="loader-bar">
+            <div class="loader-bar-fill" id="loaderFill"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" id="navLogo">
+                <svg viewBox="0 0 200 50" class="logo-svg nav-logo-svg">
+                    <defs>
+                        <linearGradient id="navSilver" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ffffff"/>
+                            <stop offset="50%" style="stop-color:#c0c0c0"/>
+                            <stop offset="100%" style="stop-color:#909090"/>
+                        </linearGradient>
+                    </defs>
+                    <text x="0" y="32" fill="url(#navSilver)" font-family="'Outfit', sans-serif" font-weight="700" font-size="34" letter-spacing="2">LE</text>
+                    <text x="52" y="32" fill="#e63946" font-family="'Outfit', sans-serif" font-weight="700" font-size="34" letter-spacing="2">X</text>
+                    <text x="72" y="32" fill="url(#navSilver)" font-family="'Outfit', sans-serif" font-weight="700" font-size="34" letter-spacing="2">RA</text>
+                    <text x="42" y="48" fill="#777" font-family="'Outfit', sans-serif" font-weight="300" font-size="10" letter-spacing="8">STUDIO</text>
+                </svg>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+                <li><a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a></li>
+                <li><a href="#process" class="nav-link" data-section="process">Process</a></li>
+                <li><a href="#testimonials" class="nav-link" data-section="testimonials">Testimonials</a></li>
+                <li><a href="#pricing" class="nav-link" data-section="pricing">Pricing</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Start a Project</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="assets/images/hero-bg.png" alt="" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Premium Web Design Studio</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-title-line">We Craft</span>
+                <span class="hero-title-line hero-title-accent">Digital Experiences</span>
+                <span class="hero-title-line">That <em>Convert</em></span>
+            </h1>
+            <p class="hero-description">
+                We design and build stunning, high-performance websites that captivate your audience 
+                and drive measurable business results. From pixel-perfect design to flawless deployment.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">
+                    <span>Let's Build Together</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#portfolio" class="btn btn-ghost">
+                    <span>View Our Work</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-number" data-count="150">0</span><span class="hero-stat-plus">+</span>
+                    <span class="hero-stat-label">Projects Delivered</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number" data-count="98">0</span><span class="hero-stat-plus">%</span>
+                    <span class="hero-stat-label">Client Satisfaction</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number" data-count="5">0</span><span class="hero-stat-plus">+</span>
+                    <span class="hero-stat-label">Years Experience</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <div class="scroll-dot"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Marquee Section -->
+    <section class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>Web Design</span><span class="marquee-dot">✦</span>
+                <span>Development</span><span class="marquee-dot">✦</span>
+                <span>Hosting</span><span class="marquee-dot">✦</span>
+                <span>E-Commerce</span><span class="marquee-dot">✦</span>
+                <span>SEO</span><span class="marquee-dot">✦</span>
+                <span>Branding</span><span class="marquee-dot">✦</span>
+                <span>Maintenance</span><span class="marquee-dot">✦</span>
+                <span>Performance</span><span class="marquee-dot">✦</span>
+                <span>Web Design</span><span class="marquee-dot">✦</span>
+                <span>Development</span><span class="marquee-dot">✦</span>
+                <span>Hosting</span><span class="marquee-dot">✦</span>
+                <span>E-Commerce</span><span class="marquee-dot">✦</span>
+                <span>SEO</span><span class="marquee-dot">✦</span>
+                <span>Branding</span><span class="marquee-dot">✦</span>
+                <span>Maintenance</span><span class="marquee-dot">✦</span>
+                <span>Performance</span><span class="marquee-dot">✦</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Services Built for <span class="text-accent">Growth</span></h2>
+                <p class="section-subtitle">From initial concept to ongoing management, we provide end-to-end digital solutions tailored to your business goals.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <div class="service-number">01</div>
+                    <h3 class="service-title">Website Design</h3>
+                    <p class="service-desc">Stunning, conversion-focused designs that reflect your brand identity and captivate your audience from the first pixel.</p>
+                    <ul class="service-features">
+                        <li>Custom UI/UX Design</li>
+                        <li>Responsive Layouts</li>
+                        <li>Brand Integration</li>
+                    </ul>
+                    <div class="service-hover-line"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <div class="service-number">02</div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-desc">Clean, performant code built with modern technologies. From simple landing pages to complex web applications.</p>
+                    <ul class="service-features">
+                        <li>Frontend & Backend</li>
+                        <li>API Integrations</li>
+                        <li>Performance Optimized</li>
+                    </ul>
+                    <div class="service-hover-line"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <div class="service-number">03</div>
+                    <h3 class="service-title">Web Hosting</h3>
+                    <p class="service-desc">Blazing-fast, secure hosting solutions with 99.9% uptime guarantee. Your site, always online and lightning quick.</p>
+                    <ul class="service-features">
+                        <li>SSL Certificates</li>
+                        <li>CDN Integration</li>
+                        <li>Daily Backups</li>
+                    </ul>
+                    <div class="service-hover-line"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    </div>
+                    <div class="service-number">04</div>
+                    <h3 class="service-title">Website Management</h3>
+                    <p class="service-desc">Ongoing care and optimization. We handle updates, security patches, content changes, and performance monitoring.</p>
+                    <ul class="service-features">
+                        <li>Content Updates</li>
+                        <li>Security Monitoring</li>
+                        <li>Analytics Reports</li>
+                    </ul>
+                    <div class="service-hover-line"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <div class="service-number">05</div>
+                    <h3 class="service-title">Bug Fixing & Support</h3>
+                    <p class="service-desc">Something broken? We diagnose and fix issues fast. Expert troubleshooting for any website platform or technology.</p>
+                    <ul class="service-features">
+                        <li>Quick Turnaround</li>
+                        <li>Cross-Browser Fixes</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <div class="service-hover-line"></div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    </div>
+                    <div class="service-number">06</div>
+                    <h3 class="service-title">SEO & Optimization</h3>
+                    <p class="service-desc">Get found online. We optimize your website for search engines, speed, and accessibility to maximize your reach.</p>
+                    <ul class="service-features">
+                        <li>On-Page SEO</li>
+                        <li>Core Web Vitals</li>
+                        <li>Accessibility Audit</li>
+                    </ul>
+                    <div class="service-hover-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Work</span>
+                <h2 class="section-title">Featured <span class="text-accent">Projects</span></h2>
+                <p class="section-subtitle">A curated selection of our recent work across industries. Every project is a unique story of collaboration and craft.</p>
+            </div>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="development">Development</button>
+                <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="ecommerce" data-aos="fade-up">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio-ecommerce.png" alt="Aurora Fashion - E-Commerce Platform" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <span class="portfolio-category">E-Commerce</span>
+                                <h3>Aurora Fashion</h3>
+                                <p>Luxury fashion e-commerce with immersive shopping experience</p>
+                                <a href="#" class="portfolio-link">View Case Study →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="development" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio-saas.png" alt="DataPulse - SaaS Dashboard" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <span class="portfolio-category">Development</span>
+                                <h3>DataPulse</h3>
+                                <p>Analytics dashboard with real-time data visualization</p>
+                                <a href="#" class="portfolio-link">View Case Study →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="design" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio-restaurant.png" alt="Noir Bistro - Restaurant Website" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <span class="portfolio-category">Design</span>
+                                <h3>Noir Bistro</h3>
+                                <p>Fine dining website with online reservation system</p>
+                                <a href="#" class="portfolio-link">View Case Study →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="design" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio-realestate.png" alt="Prestige Homes - Real Estate" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <span class="portfolio-category">Design</span>
+                                <h3>Prestige Homes</h3>
+                                <p>Luxury property listings with virtual tour integration</p>
+                                <a href="#" class="portfolio-link">View Case Study →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="development" data-aos="fade-up" data-aos-delay="400">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio-fitness.png" alt="IronForge - Fitness Platform" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <span class="portfolio-category">Development</span>
+                                <h3>IronForge Gym</h3>
+                                <p>Dynamic fitness platform with membership management</p>
+                                <a href="#" class="portfolio-link">View Case Study →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="ecommerce" data-aos="fade-up" data-aos-delay="500">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio-agency.png" alt="Verve Creative - Agency Website" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-overlay-content">
+                                <span class="portfolio-category">E-Commerce</span>
+                                <h3>Verve Creative</h3>
+                                <p>Award-winning creative agency digital presence</p>
+                                <a href="#" class="portfolio-link">View Case Study →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">How We Work</span>
+                <h2 class="section-title">Our <span class="text-accent">Process</span></h2>
+                <p class="section-subtitle">A transparent, collaborative approach that turns your vision into reality — step by step.</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step" data-aos="fade-right">
+                    <div class="process-step-number">01</div>
+                    <div class="process-step-content">
+                        <h3>Discovery & Strategy</h3>
+                        <p>We dive deep into your business, audience, and goals. Through research and strategy sessions, we map out the perfect digital roadmap for your brand.</p>
+                    </div>
+                    <div class="process-step-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-left">
+                    <div class="process-step-number">02</div>
+                    <div class="process-step-content">
+                        <h3>Design & Prototype</h3>
+                        <p>We create stunning visual designs and interactive prototypes. You'll see your website come to life before a single line of code is written.</p>
+                    </div>
+                    <div class="process-step-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-right">
+                    <div class="process-step-number">03</div>
+                    <div class="process-step-content">
+                        <h3>Development & Testing</h3>
+                        <p>Our developers bring designs to life with clean, efficient code. Rigorous testing across devices ensures a flawless experience everywhere.</p>
+                    </div>
+                    <div class="process-step-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-left">
+                    <div class="process-step-number">04</div>
+                    <div class="process-step-content">
+                        <h3>Launch & Support</h3>
+                        <p>We deploy your site with zero downtime and provide ongoing support, updates, and optimization to keep your site performing at its peak.</p>
+                    </div>
+                    <div class="process-step-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Client Love</span>
+                <h2 class="section-title">What Our Clients <span class="text-accent">Say</span></h2>
+                <p class="section-subtitle">Don't just take our word for it — here's what the businesses we've worked with have to say.</p>
+            </div>
+            <div class="testimonials-wrapper">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-quote">
+                            "Lexra Studio transformed our entire online presence. The new website increased our conversion rate by 340% in just three months. Their attention to detail is unmatched."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">SK</div>
+                            <div>
+                                <div class="testimonial-name">Sarah Kim</div>
+                                <div class="testimonial-role">CEO, Aurora Fashion</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-quote">
+                            "Working with Lexra was an absolute pleasure. They understood our vision from day one and delivered a website that exceeded every expectation. Highly recommend!"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">MR</div>
+                            <div>
+                                <div class="testimonial-name">Michael Russo</div>
+                                <div class="testimonial-role">Founder, Noir Bistro</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-quote">
+                            "The team at Lexra Studio are wizards. Our dashboard went from clunky to world-class. They handle everything from design to hosting — truly a one-stop shop."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">JP</div>
+                            <div>
+                                <div class="testimonial-name">James Park</div>
+                                <div class="testimonial-role">CTO, DataPulse</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-quote">
+                            "From the initial consultation to launch and ongoing support, Lexra Studio has been phenomenal. Our property listings look incredible and enquiries have doubled."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">LC</div>
+                            <div>
+                                <div class="testimonial-name">Laura Chen</div>
+                                <div class="testimonial-role">Director, Prestige Homes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <button class="testimonial-btn" id="testimonialPrev" aria-label="Previous testimonial">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    </button>
+                    <div class="testimonial-dots" id="testimonialDots"></div>
+                    <button class="testimonial-btn" id="testimonialNext" aria-label="Next testimonial">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Pricing</span>
+                <h2 class="section-title">Transparent <span class="text-accent">Plans</span></h2>
+                <p class="section-subtitle">No hidden fees, no surprises. Choose the plan that fits your needs, or let us create a custom package.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="fade-up">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Starter</h3>
+                        <p class="pricing-desc">Perfect for small businesses and personal brands</p>
+                    </div>
+                    <div class="pricing-amount">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-price">1,499</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Up to 5 Pages</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Responsive Design</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Contact Form</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Basic SEO Setup</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>1 Month Free Support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline pricing-btn">Get Started</a>
+                </div>
+                <div class="pricing-card pricing-card-featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Professional</h3>
+                        <p class="pricing-desc">For growing businesses that need a powerful presence</p>
+                    </div>
+                    <div class="pricing-amount">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-price">3,499</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Up to 15 Pages</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Custom Animations</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>CMS Integration</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Advanced SEO</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Hosting Setup</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>3 Months Free Support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary pricing-btn">Get Started</a>
+                </div>
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Enterprise</h3>
+                        <p class="pricing-desc">Full-scale digital solutions for ambitious brands</p>
+                    </div>
+                    <div class="pricing-amount">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-price">7,999</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Unlimited Pages</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>E-Commerce / Web App</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Custom Dashboard</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Full SEO & Analytics</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Managed Hosting</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e63946" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>12 Months Support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline pricing-btn">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Build Something <span class="text-accent">Extraordinary</span>?</h2>
+                <p class="cta-desc">Let's turn your vision into a digital masterpiece. Book a free consultation and discover what Lexra Studio can do for your business.</p>
+                <a href="#contact" class="btn btn-primary btn-lg">
+                    <span>Schedule Free Consultation</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Let's Start Your <span class="text-accent">Project</span></h2>
+                <p class="section-subtitle">Fill out the form below and we'll get back to you within 24 hours with a tailored proposal.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>hello@lexrastudio.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>Global — We work remotely with clients worldwide</p>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="#" class="social-link" aria-label="Twitter/X">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Dribbble">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72M19.13 5.09C15.22 9.14 10.93 10.44 2.64 10.96M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm" data-aos="fade-left">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company" placeholder="Your Company">
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="" disabled selected>Select budget</option>
+                                <option>Under $1,500</option>
+                                <option>$1,500 - $3,500</option>
+                                <option>$3,500 - $8,000</option>
+                                <option>$8,000+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Needed</label>
+                        <select id="service" name="service">
+                            <option value="" disabled selected>Select a service</option>
+                            <option>Website Design</option>
+                            <option>Web Development</option>
+                            <option>E-Commerce</option>
+                            <option>Website Redesign</option>
+                            <option>Hosting & Management</option>
+                            <option>Bug Fixing & Support</option>
+                            <option>SEO & Optimization</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project, goals, and timeline..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <svg viewBox="0 0 200 50" class="logo-svg footer-logo-svg">
+                        <defs>
+                            <linearGradient id="footerSilver" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ffffff"/>
+                                <stop offset="50%" style="stop-color:#c0c0c0"/>
+                                <stop offset="100%" style="stop-color:#909090"/>
+                            </linearGradient>
+                        </defs>
+                        <text x="0" y="32" fill="url(#footerSilver)" font-family="'Outfit', sans-serif" font-weight="700" font-size="34" letter-spacing="2">LE</text>
+                        <text x="52" y="32" fill="#e63946" font-family="'Outfit', sans-serif" font-weight="700" font-size="34" letter-spacing="2">X</text>
+                        <text x="72" y="32" fill="url(#footerSilver)" font-family="'Outfit', sans-serif" font-weight="700" font-size="34" letter-spacing="2">RA</text>
+                        <text x="42" y="48" fill="#777" font-family="'Outfit', sans-serif" font-weight="300" font-size="10" letter-spacing="8">STUDIO</text>
+                    </svg>
+                    <p class="footer-tagline">Crafting digital experiences that move brands forward.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Website Design</a></li>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Web Hosting</a></li>
+                        <li><a href="#services">Bug Fixing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#home">About Us</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Twitter / X</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Dribbble</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lexra Studio. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
